@@ -1,5 +1,5 @@
-# English: See the configuration tutorial at http://dev.bukkit.org/bukkit-plugins/openguild/pages/config-configuration/
-# polski: Patrz poradnik konfiguracji na https://github.com/grzegorz2047/OpenGuild2047/wiki/Konfiguracja
+# English: See the configuration tutorial at http://dev.bukkit.org/bukkit-plugins/uniguild/pages/config-configuration/
+# polski: Patrz poradnik konfiguracji na https://github.com/grzegorz2047/UniGuild/wiki/Konfiguracja
 # svenska: Det finns inte konfiguration guide på svenska :(
 language: PL
 teampvp: false
@@ -39,14 +39,14 @@ random-tp:
   enabled: false
   button: true
 database: FILE
-file-dir: plugins/OpenGuild2047/og.db
+file-dir: plugins/UniGuild/og.db
 snooper: true
 updater: true
-sql-table-prefix: openguild_
+sql-table-prefix: uniguild_
 mysql:
   address: localhost
   port: 3306
-  database: openguild
+  database: uniguild
   login: user
   password: password
   debug: false

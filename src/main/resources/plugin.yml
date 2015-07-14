@@ -1,7 +1,7 @@
 name: UniGuild
 description: UniGuild is public, multiplatform, open source guild plugin
 authors: [grzegorz2047, shooly, TheMolkaPL]
-website: https://www.github.com/grzegorz2047/OpenGuild2047
+website: https://www.github.com/grzegorz2047/UniGuild
 version: '${project.version}'
 prefix: 'UniGuild'
 softdepend: [Skript]
