@@ -12,12 +12,12 @@ Wymagania
  *
  */
 
-package pl.grzegorz2047.openguild;
+package pl.grzegorz2047.UniGuild;
 
-import com.github.grzegorz2047.openguild.OpenGuild;
+import com.github.grzegorz2047.UniGuild.UniGuild;
 import java.util.ArrayList;
 import java.util.HashMap;
-import pl.openguild2047.openguild.commands.GuildCommand;
+import pl.UniGuild2047.UniGuild.commands.GuildCommand;
 
 public class TestClass {
     
