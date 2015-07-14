@@ -13,14 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild.platform;
+package pl.grzegorz2047.uniguild.player;
 
-import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  *
  * @author Grzegorz
  */
-public class UniGuildBukkit extends JavaPlugin{
+public class UniID {
+    
+    public UniID fromString(String name) {
+        return this;
+    }
+    
+    
     
 }

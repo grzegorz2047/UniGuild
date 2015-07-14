@@ -13,28 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild;
+package pl.grzegorz2047.uniguild.guild;
+
+import pl.grzegorz2047.uniguild.player.UniID;
 
 /**
  *
  * @author Grzegorz
  */
-public class UniGuild {
-    // Spigot == Bukkit ?
-    public enum ServerType { BUKKIT, SPIGOT, SPONGE};
+public class Guild {
     
-    private ServerType type;
     
-    public UniGuild(ServerType type){
-        this.type = type;
-    }
-    
-    public void start(){
-        //TODO
-    }
-    
-    public void stop(){
-        //TODO
-    }
+
     
 }

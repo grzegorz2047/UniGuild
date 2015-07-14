@@ -13,28 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild;
+package pl.grzegorz2047.uniguild.guild.cuboid;
 
 /**
  *
  * @author Grzegorz
  */
-public class UniGuild {
-    // Spigot == Bukkit ?
-    public enum ServerType { BUKKIT, SPIGOT, SPONGE};
+public class UniWorld {
     
-    private ServerType type;
+    private String worldName; 
+    private double maxHeight;
     
-    public UniGuild(ServerType type){
-        this.type = type;
+    public UniWorld(String name){
+        this.worldName= name;
     }
-    
-    public void start(){
-        //TODO
+
+    public String getWorldName() {
+        return worldName;
     }
-    
-    public void stop(){
-        //TODO
+
+    public double getMaxHeight() {
+        return maxHeight;
     }
-    
 }

@@ -13,28 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild;
+package pl.grzegorz2047.uniguild.player;
 
 /**
  *
  * @author Grzegorz
  */
-public class UniGuild {
-    // Spigot == Bukkit ?
-    public enum ServerType { BUKKIT, SPIGOT, SPONGE};
+public class UniPlayer {
     
-    private ServerType type;
-    
-    public UniGuild(ServerType type){
-        this.type = type;
+    private UniID playername;
+    private String clantag;
+    private boolean leader;
+
+    public UniPlayer(UniID playerId, String tag, boolean leader) {
+        this.playername = playerId;
+        this.clantag = tag;
+        this.leader = leader;
     }
-    
-    public void start(){
-        //TODO
+
+    public UniID getPlayerId() {
+        return this.playername;
     }
-    
-    public void stop(){
-        //TODO
+
+    public String getClanTag() {
+        return this.clantag;
+    }
+
+    public boolean isLeader() {
+        return this.leader;
     }
     
 }

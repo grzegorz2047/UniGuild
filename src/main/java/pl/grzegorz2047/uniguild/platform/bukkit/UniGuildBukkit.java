@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild;
+package pl.grzegorz2047.uniguild.platform.bukkit;
+
+import org.bukkit.plugin.java.JavaPlugin;
+import pl.grzegorz2047.uniguild.UniGuild;
+import pl.grzegorz2047.uniguild.UniGuild.ServerType;
 
 /**
  *
  * @author Grzegorz
  */
-public class UniGuild {
-    // Spigot == Bukkit ?
-    public enum ServerType { BUKKIT, SPIGOT, SPONGE};
-    
-    private ServerType type;
-    
-    public UniGuild(ServerType type){
-        this.type = type;
+public class UniGuildBukkit extends JavaPlugin{
+
+    private UniGuild plugin;
+    @Override
+    public void onEnable() {
+        this.plugin = new UniGuild(ServerType.BUKKIT);
+        plugin.start();
     }
-    
-    public void start(){
-        //TODO
-    }
-    
-    public void stop(){
-        //TODO
+
+    @Override
+    public void onDisable() {
+        plugin.stop();
     }
     
 }
