@@ -5,7 +5,7 @@ website: https://www.github.com/grzegorz2047/UniGuild
 version: '${project.version}'
 prefix: 'UniGuild'
 softdepend: [Skript]
-main: pl.grzegorz2047.uniguild.UniGuild
+main: pl.grzegorz2047.uniguild.platform.bukkit.UniGuildBukkit
 commands:
   guild:
     description: Commands related to guilds

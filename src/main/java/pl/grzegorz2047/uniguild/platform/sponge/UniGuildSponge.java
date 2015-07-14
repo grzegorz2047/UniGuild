@@ -13,29 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild.platform.bukkit;
+package pl.grzegorz2047.uniguild.platform.sponge;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import org.spongepowered.api.event.Subscribe;
+import org.spongepowered.api.event.state.ServerStartedEvent;
+import org.spongepowered.api.plugin.Plugin;
 import pl.grzegorz2047.uniguild.UniGuild;
 import pl.grzegorz2047.uniguild.UniGuild.ServerType;
 
 /**
  *
  * @author Grzegorz
- */
-public class UniGuildBukkit extends JavaPlugin{
-
-    private UniGuild plugin;
+ */         @Plugin(id = "UniGuild", name = "UniGuild", version = "0.1")
+public class UniGuildSponge {
     
-    @Override
-    public void onEnable() {
-        this.plugin = new UniGuild(ServerType.BUKKIT);
+    @Subscribe
+    public void onServerStart(ServerStartedEvent event) {
+        UniGuild plugin = new UniGuild(ServerType.SPONGE);
         plugin.start();
     }
-
-    @Override
-    public void onDisable() {
-        plugin.stop();
-    }
-    
 }

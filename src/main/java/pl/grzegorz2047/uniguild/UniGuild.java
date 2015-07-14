@@ -20,6 +20,10 @@ package pl.grzegorz2047.uniguild;
  * @author Grzegorz
  */
 public class UniGuild {
+    
+    private String name = "UniGuild";
+    private float version = 0.1f;
+    
     // Spigot == Bukkit ?
     public enum ServerType { BUKKIT, SPIGOT, SPONGE};
     
@@ -30,7 +34,7 @@ public class UniGuild {
     }
     
     public void start(){
-        //TODO
+        System.out.println("Plugin "+this.name+" "+this.version+" zostal uruchomiony");
     }
     
     public void stop(){

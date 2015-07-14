@@ -4,7 +4,7 @@
 
   <groupId>pl.grzegorz2047</groupId>
   <artifactId>UniGuild</artifactId>
-  <version>0.6.5</version>
+  <version>0.1</version>
   <packaging>jar</packaging>
   <name>UniGuild</name>
   <properties>
