@@ -1,0 +1,78 @@
+# English: See the configuration tutorial at http://dev.bukkit.org/bukkit-plugins/openguild/pages/config-configuration/
+# polski: Patrz poradnik konfiguracji na https://github.com/grzegorz2047/OpenGuild2047/wiki/Konfiguracja
+# svenska: Det finns inte konfiguration guide på svenska :(
+language: PL
+teampvp: false
+teampvp-msg: false
+home-command: true
+teleport-cooldown: 10
+spawn:
+  location-max: [world, 50, 50]
+  location-min: [world, -50, -50]
+  block-guild-creating: true
+  block-enter: false
+  block-enter-time: 10
+  message: '&cYou are not allowed to do this at the servers spawn point!'
+  extra: 50
+cuboid:
+  check-players-on-create: true
+  enabled: true
+  notify-permission: false
+  min-radius: 15
+  max-radius: 50
+  canenterarea: true
+  notify-enter: true
+  notify-enter-members: false
+  notify-enter-sound: false
+  notify-enter-sound-type: ENDERMAN_DEATH
+  extra-protection: true
+  breaking-blocks:
+    item-types: [DIAMOND_PICKAXE]
+    damage: 0
+hardcore-bans:
+  enabled: false
+  ban-time: 1h
+  kick-message: '&4You are dead! &7The revival will occur &6%TIME&7!'
+  login-message: '&7You are banned for death to &6%TIME'
+  lightning: true
+random-tp:
+  enabled: false
+  button: true
+database: FILE
+file-dir: plugins/OpenGuild2047/og.db
+snooper: true
+updater: true
+sql-table-prefix: openguild_
+mysql:
+  address: localhost
+  port: 3306
+  database: openguild
+  login: user
+  password: password
+  debug: false
+tags:
+  enabled: true
+  ally: '&1[{TAG}] '
+  enemy: '&4[{TAG}] '
+  guild: '&2[{TAG}] '
+guildprefixinchat: true
+forbiddenguildnames:
+use-new-command-api: true
+join-msg: ''
+quit-msg: ''
+forcedesc: false
+debug: false
+chat:
+  prefix: '&6[{TAG}] '
+  guild-format: '&8[&aGuild&8] &b{PLAYER}&7: &f{MESSAGE}'
+  guild-key: '@'
+  ally-format: '&8[&9Ally&8] &8[&9{GUILD}&8] &b{PLAYER}&7: &f{MESSAGE}'
+  ally-key: '!'
+required-items:
+- 'WOOL:1:2:1'
+listener:
+  player-move-event: false
+  tnt-block-enabled: true
+  tnt-block-time: 30
+forbidden-worlds:
+  - myforbbidenworld

@@ -1,0 +1,17 @@
+name: UniGuild
+description: UniGuild is public, multiplatform, open source guild plugin
+authors: [grzegorz2047, shooly, TheMolkaPL]
+website: https://www.github.com/grzegorz2047/OpenGuild2047
+version: '${project.version}'
+prefix: 'UniGuild'
+softdepend: [Skript]
+main: pl.grzegorz2047.uniguild.UniGuild
+commands:
+  guild:
+    description: Commands related to guilds
+    aliases: [g, gildia, guild, clan, f, og, openguild, uniguild]
+    usage: /guild <arg[s]...> Type 'guild help' for help
+  team:
+    description: Teams chat
+    aliases: [t]
+    usage: /team <message...>
