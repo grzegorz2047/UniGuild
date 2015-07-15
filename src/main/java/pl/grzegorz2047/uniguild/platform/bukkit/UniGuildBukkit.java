@@ -15,9 +15,13 @@
  */
 package pl.grzegorz2047.uniguild.platform.bukkit;
 
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import pl.grzegorz2047.uniguild.UniGuild;
 import pl.grzegorz2047.uniguild.UniGuild.ServerType;
+import pl.grzegorz2047.uniguild.platform.bukkit.listener.PlayerJoinListener;
+import pl.grzegorz2047.uniguild.platform.bukkit.listener.PlayerQuitListener;
 
 /**
  *
@@ -25,17 +29,56 @@ import pl.grzegorz2047.uniguild.UniGuild.ServerType;
  */
 public class UniGuildBukkit extends JavaPlugin{
 
-    private UniGuild plugin;
+    private static UniGuild plugin;
+    private static UniGuildBukkit bukkitPlugin;//Singleton 
     
+
     @Override
     public void onEnable() {
-        this.plugin = new UniGuild(ServerType.BUKKIT);
+        if(!this.isCompatible()){
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
+        plugin = new UniGuild(ServerType.BUKKIT);
         plugin.start();
+        bukkitPlugin = this;     
+        loadAllListeners();
     }
-
+    
     @Override
     public void onDisable() {
         plugin.stop();
+    }
+    private void loadAllListeners() {
+        PluginManager pm = getServer().getPluginManager();
+
+        pm.registerEvents(new PlayerJoinListener(), this);
+        pm.registerEvents(new PlayerQuitListener(), this);
+
+    }
+    public boolean isCompatible(){
+        try {
+            if(getServer().getOfflinePlayer("Notch").getUniqueId() == null) {
+                Bukkit.getLogger().warning("Your Minecraft server version is lower than 1.7.5!");
+                Bukkit.getLogger().warning("This plugin is not compatibile with your version of Minecraft server!");
+                return false;
+            }
+        } catch(Exception e) {
+            Bukkit.getLogger().warning("Your Minecraft server version is lower than 1.7.5!");
+            Bukkit.getLogger().warning("This plugin is not compatibile with your version of Minecraft server!");
+            return false;
+        }
+        
+        System.out.print("Your Minecraft server version is " + Bukkit.getVersion());
+        return true;
+    }
+
+    public static UniGuildBukkit getBukkitPlugin() {
+        return bukkitPlugin;
+    }
+    
+    public static UniGuild getPlugin() {
+        return plugin;
     }
     
 }

@@ -13,24 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild.platform.sponge;
+package pl.grzegorz2047.uniguild.manager;
 
-import org.spongepowered.api.event.Subscribe;
-import org.spongepowered.api.event.state.ServerStartedEvent;
-import org.spongepowered.api.plugin.Plugin;
-import pl.grzegorz2047.uniguild.UniGuild;
-import pl.grzegorz2047.uniguild.UniGuild.ServerType;
+import pl.grzegorz2047.uniguild.player.UniID;
+import pl.grzegorz2047.uniguild.player.UniPlayer;
 
 /**
  *
  * @author Grzegorz
- */         
-@Plugin(id = "UniGuild", name = "UniGuild", version = "0.1")
-public class UniGuildSponge {
+ */
+public class UniPlayerManager {
     
-    @Subscribe
-    public void onServerStart(ServerStartedEvent event) {
-        UniGuild plugin = new UniGuild(ServerType.SPONGE);
-        plugin.start();
+    public static UniPlayer getPlayer(UniID id){
+        return null;//TODO
     }
+    
+    public static boolean createPlayer(UniID id){
+        return true;//TODO
+    }
+    
+    public static boolean removePlayer(UniID id){
+        return true;//TODO
+    }
+    
+    public static boolean exists(UniID id){
+        return true;//TODO
+    }
+    
 }

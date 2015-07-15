@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Grzegorz.
+ * Copyright 2014 Aleksander.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,19 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild.player;
+package pl.grzegorz2047.uniguild.database;
 
+import java.sql.Connection;
 
 /**
  *
- * @author Grzegorz
+ * @author Aleksander
  */
-public class UniID {
+public interface SQLData {
+    Connection getDriver();
     
-    protected String playerId;
-    
-    
-    
-    
-    
+    String name();
 }

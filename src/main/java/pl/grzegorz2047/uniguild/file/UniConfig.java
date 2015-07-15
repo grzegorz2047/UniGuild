@@ -13,24 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pl.grzegorz2047.uniguild.platform.sponge;
+package pl.grzegorz2047.uniguild.file;
 
-import org.spongepowered.api.event.Subscribe;
-import org.spongepowered.api.event.state.ServerStartedEvent;
-import org.spongepowered.api.plugin.Plugin;
-import pl.grzegorz2047.uniguild.UniGuild;
-import pl.grzegorz2047.uniguild.UniGuild.ServerType;
+import java.util.HashMap;
 
 /**
  *
  * @author Grzegorz
- */         
-@Plugin(id = "UniGuild", name = "UniGuild", version = "0.1")
-public class UniGuildSponge {
+ */
+public abstract class UniConfig {//Template?
     
-    @Subscribe
-    public void onServerStart(ServerStartedEvent event) {
-        UniGuild plugin = new UniGuild(ServerType.SPONGE);
-        plugin.start();
+    private String fileName;
+    private String path;
+    HashMap <String, String> data = new HashMap<String, String>();
+    
+    public UniConfig(String fileName, String path){
+        this.fileName = fileName;
+        this.path = path;
     }
+    
+    public boolean generateFile(){
+        return true;//TODO
+    }
+    
+    public void addValue(String key, String value){
+        data.put(key, value);
+    }
+    
+    public void saveFile(){
+        
+    }
+    public void loadFile(){
+        
+    }
+    
 }
